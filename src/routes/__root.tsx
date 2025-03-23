@@ -16,7 +16,7 @@ const rootComponent = () => {
       <LazyMotion features={domAnimation}>
         <ThemeLayout>
           <MainLayout />
-          <ReactQueryDevtools initialIsOpen={false} />
+          <ReactQueryDevtools initialIsOpen={true} />
         </ThemeLayout>
       </LazyMotion>
     </div>
