@@ -1,0 +1,47 @@
+.audio_recorder {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .uploaded_audio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(var(--primary-color));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+      background-color: rgb(var(--primary-color-hover));
+    }
+
+    &:active {
+      background-color: rgb(var(--primary-color-active));
+    }
+  }
+}
+
+.custom_notify {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  gap: 10px;
+  background-color: rgb(var(--secondary-color-hover));
+}

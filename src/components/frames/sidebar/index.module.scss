@@ -1,0 +1,212 @@
+@use '@/styles/_variables';
+
+.sidebar_block {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  position: relative;
+
+  .sidebar {
+    height: 100svh;
+    background-color: rgb(var(--secondary-color-hover));
+    font-size: 1rem;
+    padding: 10px;
+    position: relative;
+    transition: all linear 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    z-index: 2;
+
+    &.collapsed {
+      padding: 10px 0px;
+      border: none;
+
+      .buttons {
+        overflow: hidden;
+      }
+
+      li > a {
+        display: flex;
+        justify-content: start;
+      }
+    }
+
+    .buttons {
+      width: 260px;
+      height: 50px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .toggle {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: rgb(var(--text-color));
+        transition: all linear 0.2s;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: rgb(var(--secondary-color));
+        }
+      }
+    }
+
+    .new_chat_btn {
+      width: 100%;
+      background-color: transparent;
+      color: rgb(var(--text-color));
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 15px;
+      padding: 5px 10px;
+      height: 45px;
+      cursor: pointer;
+      transition: all linear 0.2s;
+      overflow: hidden;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        transition: transform ease-in-out 0.2s;
+      }
+
+      &:hover {
+        background-color: rgb(var(--secondary-color));
+
+        span {
+          transform: translateX(10px);
+        }
+      }
+    }
+
+    hr {
+      border: 1px solid rgb(var(--text-color));
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+      overflow-y: scroll;
+      padding-right: 10px;
+
+      li {
+        list-style-type: none;
+        width: 100%;
+        border-radius: 5px;
+        transition: all linear 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        padding: 0px 10px;
+        height: 40px;
+
+        a {
+          height: 100%;
+          padding: 6px 0px;
+          width: 100%;
+          overflow: hidden;
+
+          span {
+            transition: transform ease-in-out 0.2s;
+          }
+        }
+
+        .remove_chat_btn {
+          height: 32px;
+          width: 32px;
+          padding: 4px;
+          background-color: transparent;
+          color: rgb(var(--text-color));
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          opacity: 0;
+          transition: all ease-in-out 0.2s;
+
+          &:hover {
+            background-color: rgb(var(--secondary-color-hover));
+          }
+        }
+
+        &:hover {
+          background-color: rgb(var(--secondary-color));
+
+          span {
+            transform: translateX(10px);
+          }
+
+          .remove_chat_btn {
+            opacity: 1;
+          }
+        }
+      }
+
+      .active {
+        transition: background-color linear 0.2s;
+        border-radius: 5px;
+        background-color: rgb(var(--secondary-color));
+      }
+    }
+
+    .not_found {
+      width: 100%;
+      padding: 0px 10px;
+    }
+  }
+
+  .set_collapsed_btn {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    z-index: 1;
+
+    .toggle {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      color: rgb(var(--text-color));
+      transition: all linear 0.2s;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgb(var(--secondary-color-hover));
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .sidebar_block {
+    position: absolute;
+
+    .sidebar {
+      border-right: 2px solid rgba(var(--text-color), 0.4);
+    }
+  }
+}

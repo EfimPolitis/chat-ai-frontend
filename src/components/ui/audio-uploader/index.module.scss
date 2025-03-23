@@ -1,0 +1,64 @@
+.uploader {
+  position: absolute;
+  width: 60%;
+  height: 60svh;
+  border: 2px dashed rgb(var(--text-color));
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: rgb(var(--secondary-color));
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1;
+
+  .iconContainer {
+    display: flex;
+    justify-content: center;
+
+    .uploadIcon {
+      color: rgb(var(--text-color));
+    }
+  }
+
+  .spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 4px dashed #3b82f6;
+    border-radius: 9999px;
+    animation: spin 1s linear infinite;
+  }
+
+  .doneIcon {
+    color: #10b981; // green-500
+  }
+
+  .text {
+    color: rgb(var(--text-color));
+
+    .link {
+      color: #3b82f6;
+      text-decoration: underline;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      font: inherit;
+    }
+  }
+}
+
+.uploaderDragging {
+  border-color: #3b82f6;
+  background-color: rgb(var(--secondary-color-hover));
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

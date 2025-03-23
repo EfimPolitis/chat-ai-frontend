@@ -1,0 +1,17 @@
+.themeBtn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: rgb(var(--text-color));
+  transition: all linear 0.2s;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgb(var(--secondary-color));
+  }
+}

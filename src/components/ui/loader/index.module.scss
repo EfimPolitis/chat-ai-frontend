@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loader {
+    animation: Rotate 1s linear infinite;
+
+    @keyframes Rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

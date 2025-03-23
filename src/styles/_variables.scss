@@ -1,0 +1,36 @@
+:root {
+  --primary-color: 120, 52, 199;
+  --primary-color-hover: 145, 72, 228;
+  --primary-color-active: 93, 40, 154;
+  --font-stack:
+    Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+  //light mode
+  --secondary-color-light: 230, 230, 230;
+  --secondary-color-hover-light: 252, 252, 252;
+  --secondary-color-active-light: 90, 90, 90;
+  --text-color-light: 31, 31, 31;
+
+  //dark mode
+  --secondary-color-dark: 28, 28, 28;
+  --secondary-color-hover-dark: 48, 48, 48;
+  --secondary-color-active-dark: 103, 103, 103;
+  --text-color-dark: 215, 215, 215;
+}
+
+//light theme
+[data-theme='light'] {
+  --secondary-color: var(--secondary-color-light);
+  --secondary-color-hover: var(--secondary-color-hover-light);
+  --secondary-color-active: var(--secondary-color-active-light);
+  --text-color: var(--text-color-light);
+}
+
+//dark theme
+[data-theme='dark'] {
+  --secondary-color: var(--secondary-color-dark);
+  --secondary-color-hover: var(--secondary-color-hover-dark);
+  --secondary-color-active: var(--secondary-color-active-dark);
+  --text-color: var(--text-color-dark);
+}

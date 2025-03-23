@@ -1,0 +1,89 @@
+.message_block {
+  width: 100%;
+  height: min-content;
+  display: flex;
+
+  .message {
+    width: auto;
+    height: min-content;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 1.5;
+
+    .code_block {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgb(var(--secondary-color-hover));
+
+      .code_header {
+        padding: 10px 20px;
+        background-color: rgb(var(--secondary-color));
+        border-radius: 8px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .copy_btn {
+          border: none;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: transparent;
+          color: rgb(var(--text-color));
+          cursor: pointer;
+        }
+      }
+    }
+
+    .date {
+      color: rgba(var(--text-color), 0.6);
+    }
+  }
+}
+
+.user_message {
+  justify-content: flex-end;
+
+  .message {
+    background-color: rgb(var(--secondary-color-hover));
+  }
+}
+
+.assistant_message {
+  justify-content: flex-start;
+
+  .message {
+    background-color: transparent;
+  }
+}
+
+.typing_text {
+  font-size: 1rem;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.cursor_visible {
+  display: inline;
+  animation: blink 1s step-start infinite;
+}
+
+.cursor_hidden {
+  display: inline;
+  opacity: 0;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

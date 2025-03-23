@@ -1,0 +1,9 @@
+.textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  background-color: rgb(var(--secondary-color-hovers));
+  color: rgb(var(--text-color));
+  font-size: 1.4rem;
+}
