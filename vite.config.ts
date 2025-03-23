@@ -19,4 +19,9 @@ export default defineConfig({
       '@/components': resolve(__dirname, './src/components'),
     },
   },
+  preview: {
+    host: '0.0.0.0',
+    port: 3000,
+    allowedHosts: ['profunions.ru'],
+  },
 });
