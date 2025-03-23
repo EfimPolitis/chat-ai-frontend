@@ -20,6 +20,6 @@ FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 
 # Открываем порт 80 для Nginx
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["yarn","preview"]
