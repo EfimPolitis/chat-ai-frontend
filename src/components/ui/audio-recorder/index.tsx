@@ -66,6 +66,11 @@ const AudioRecorder = ({ chatId }: { chatId: string | null }) => {
       return new Error('userId is undefind');
     }
 
+    setMediaRecorder(null);
+    setIsRecording(false);
+    setRecordedChunks([]);
+    setRecordingTime(0);
+
     const blob = new Blob(recordedChunks, { type: 'audio/webm' });
     const file = new File([blob], 'recording.webm', { type: 'audio/webm' });
 
