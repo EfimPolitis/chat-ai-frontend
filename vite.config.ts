@@ -19,9 +19,12 @@ export default defineConfig({
       '@/components': resolve(__dirname, './src/components'),
     },
   },
+  build: {
+    outDir: 'dist',
+  },
   preview: {
     host: '0.0.0.0',
     port: 3000,
-    allowedHosts: ['profunions.ru'],
+    allowedHosts: ['profunions.ru', 'www.profunions.ru'],
   },
 });
