@@ -1,6 +1,5 @@
 import MainLayout from '@/components/layouts/main';
 import { ThemeLayout } from '@/components/layouts/theme';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { createRootRoute } from '@tanstack/react-router';
 import { domAnimation, LazyMotion } from 'framer-motion';
 
@@ -16,7 +15,6 @@ const rootComponent = () => {
       <LazyMotion features={domAnimation}>
         <ThemeLayout>
           <MainLayout />
-          <ReactQueryDevtools initialIsOpen={true} />
         </ThemeLayout>
       </LazyMotion>
     </div>
